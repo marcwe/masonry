@@ -1,0 +1,91 @@
+<html>
+<head>
+<style>
+	* {
+	  -webkit-box-sizing: border-box;
+	     -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+	}
+
+	.item {
+	  width:  50px;
+	  height: 50px;
+	  float: left;
+	  background: #2296DD;
+	  border: 2px solid #333;
+	}
+
+	.pic {
+		width:  300px;
+		height: 183px;
+		float: left;
+		background: #666666;
+		border: 2px solid #333;
+	}
+	.pic.port { width:  130px;height: 183px; background:#cfcfcf }
+	.pic.portplus { width:  152px;height: 183px; background:#A6E392 }
+	.pic.port200 { width:  205px;height: 183px; background:#D092E3 }
+	.item.thumbnail { width:  100px;height: 100px; background:#cfcfcf }
+	.item.medium { width:  150px;height: 50px; background: #A6E392}
+	.item.large { width:  200px;height: 100px; background: #D092E3}
+	</style>
+</head>
+
+
+<body>
+
+<!-- replace item with pic -->
+<div id='masonry' class="masonry">
+<div id="albums" class="container"> 
+<div class="pic"><a href="full/GEO_2308.jpg"><img src="thumb15/GEO_2308-15.jpg" alt="GEO_2308.jpg" /></a></div>
+		<div class="album pic"><a href="full/GEO_2314.jpg"><img src="thumb15/GEO_2314-15.jpg" alt="GEO_2314.jpg" /></a></div>
+		<div class="album pic port"><a href="full/GEO_2317.jpg"><img src="thumb15/GEO_2317-15.jpg" alt="GEO_2317.jpg" /></a></div>
+		<div class="album pic"><a href="full/GEO_2319.jpg"><img src="thumb15/GEO_2319-15.jpg" alt="GEO_2319.jpg" /></a></div>
+		</div>
+		
+<div id="singles" class="container"> <div class="single pic"><a href="full/GEO_2321.jpg"><img src="thumb15/GEO_2321-15.jpg" alt="GEO_2321.jpg" /></a></div>
+		<div class="single pic"><a href="full/GEO_2323.jpg"><img src="thumb15/GEO_2323-15.jpg" alt="GEO_2323.jpg" /></a></div>
+		<div class="single pic"><a href="full/GEO_2324.jpg"><img src="thumb15/GEO_2324-15.jpg" alt="GEO_2324.jpg" /></a></div>
+		<div class="single pic"><a href="full/GEO_2329.jpg"><img src="thumb15/GEO_2329-15.jpg" alt="GEO_2329.jpg" /></a></div></div>
+		
+		
+<div id="groups" class="container">
+<div class="group pic port"><a href="full/GEO_2334.jpg"><img src="thumb15/GEO_2334-15.jpg" alt="GEO_2334.jpg" /></a></div>
+<div class="group pic"><a href="full/GEO_2336.jpg"><img src="thumb15/GEO_2336-15.jpg" alt="GEO_2336.jpg" /></a></div>
+<div class="group pic"><a href="full/GEO_2337.jpg"><img src="thumb15/GEO_2337-15.jpg" alt="GEO_2337.jpg" /></a></div>
+<div class="group pic"><a href="full/GEO_2342.jpg"><img src="thumb15/GEO_2342-15.jpg" alt="GEO_2342.jpg" /></a></div></div>
+</div>
+
+
+<script src='masonry.pkgd.min.js'></script>
+<script type="text/javascript" >
+$(function(){
+
+  $('#albums').masonry({
+    itemSelector: '.album',
+    columnWidth: 600
+  });
+
+  $('#singles').masonry({
+    itemSelector: '.single',
+    columnWidth: 600
+  });
+  
+  $('#groups').masonry({
+    itemSelector: '.group',
+    columnWidth: 600
+  });
+
+});
+
+$('.container').masonry({
+  // itemSelector: '.item',
+  itemSelector: '.pic',
+  columnWidth: 600
+});
+
+</script>
+
+</body>
+
+</html>
