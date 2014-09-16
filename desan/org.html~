@@ -1,0 +1,94 @@
+<html>
+<head>
+
+<style>
+	* {
+	  -webkit-box-sizing: border-box;
+	     -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+	}
+
+	.item {
+	 // width:  50px;
+	 // height: 50px;
+	  width:  250px;
+	  height: 300px;
+	  float: left;
+	  background: #2296DD;
+	  border: 2px solid #333;
+	}
+
+	.pic {
+		width:  300px;
+		height: 183px;
+		float: left;
+		background: #666666;
+		border: 2px solid #333;
+	}
+	.pic.port { width:  130px;height: 183px; background:#cfcfcf }
+	.pic.portplus { width:  152px;height: 183px; background:#A6E392 }
+	.pic.port200 { width:  205px;height: 183px; background:#D092E3 }
+	.item.thumbnail { width:  100px;height: 100px; background:#cfcfcf }
+	.item.medium { width:  150px;height: 50px; background: #A6E392}
+	.item.large { width:  200px;height: 100px; background: #D092E3}
+	</style>
+
+</head>
+
+<body>
+
+
+<div id="albums" class="container">
+  <div class="album item"><a href="/full/GEO_2539.jpg"><img src="/thumb15/GEO_2539-15.jpg" alt="GEO_2539.jpg" /></a></div>
+		<div class="album item"><a href="/full/GEO_2542.jpg"><img src="/thumb15/GEO_2542-15.jpg" alt="GEO_2542.jpg" /></a></div>
+		<div class="album item"><a href="/full/GEO_2543.jpg"><img src="/thumb15/GEO_2543-15.jpg" alt="GEO_2543.jpg" /></a></div>
+		<div class="album item"><a href="/full/GEO_2549.jpg"><img src="/thumb15/GEO_2549-15.jpg" alt="GEO_2549.jpg" /></a></div>
+
+
+ 
+</div>
+
+
+
+<div id="singles" class="container">
+
+
+		<div class="single item"><a href="/full/GEO_2561.jpg"><img src="/thumb15/GEO_2561-15.jpg" alt="GEO_2561.jpg" /></a></div>
+		<div class="single item"><a href="/full/GEO_2562.jpg"><img src="/thumb15/GEO_2562-15.jpg" alt="GEO_2562.jpg" /></a></div>
+		<div class="single item"><a href="/full/GEO_2565.jpg"><img src="/thumb15/GEO_2565-15.jpg" alt="GEO_2565.jpg" /></a></div>
+		<div class="single item"><a href="/full/GEO_2574.jpg"><img src="/thumb15/GEO_2574-15.jpg" alt="GEO_2574.jpg" /></a></div>
+
+  ...
+</div>
+
+<script src='/masonry.pkgd.min.js'></script>
+<script>
+
+$(function(){
+
+  $('#albums').masonry({
+    itemSelector: '.album',
+    //columnWidth: 240
+    columnWidth: 900
+  });
+
+  $('#singles').masonry({
+    itemSelector: '.single',
+    //columnWidth: 240
+    columnWidth: 900
+  });
+
+});
+
+
+
+$('.container').masonry({
+  itemSelector: '.item',
+    //columnWidth: 240
+    columnWidth: 900
+});
+
+</script>
+
+</body>
+</html>
